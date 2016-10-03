@@ -1,1 +1,4 @@
 # lorawan_gps_tracker-prototype
+Prototyp webové aplikace pro sledování polohy zařízení v síti LoRaWAN
+
+Lokalizace polohy je vypočtena ze známých souřadnic GW, přes které přišla zpráva ze zařízení a vzdálenosti od těchto GW. Vzdálenost je předpočítaný databázový údaj, vypočtený z GPS souřadnic a spárovaný s identifikací GW, přibližným směrem daným dalšími GW, RSSI a SNR. Databáze se automaticky aktualizuje s každým dostupným zařízením s GPS. K výpočtu polohy jsou použity metody trilaterace (vzhledem k nepřesnosti dat z GPS pravděpodobně nikdy nedojde k průniku v jednom bodě), několikanásobné bilaterace (narozdíl od trilaterace nevadí drobné nepřesnosti vzdáleností).
